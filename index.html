@@ -16,7 +16,7 @@
 <nav><a href="#en">English</a><a href="#nl">Nederlands</a></nav>
 <section id="en" lang="en">
 <h1>Privacy Policy · Rooster Sync</h1>
-<p class="muted">Last updated: 19 November 2026</p>
+<p class="muted">Last updated: 20 November 2026</p>
 
 <p>Rooster Sync is an unofficial, personal app that lets a crew member fetch their own roster from the crew portal, view it, and add it to the iPhone calendar. The app is not made by, or affiliated with, the employer or the operator of the portal.</p>
 
@@ -43,7 +43,7 @@
 
 <h2>Bus times (OVapi)</h2>
 <p>Only if you choose a parking lot in Settings › Bus to Plaza (off by default), the app asks the public transport service OVapi for the shuttle bus times between that parking lot and Schiphol Plaza, before a duty from Schiphol and after landing there. Only the codes of the two bus stops are sent, no names, flight numbers or other roster details. This connection is not encrypted, because OVapi only offers it that way; it contains nothing about you. OVapi sees your device's IP address, as with any website. If you turn on the Live Activity, the bus times also appear on your Lock Screen and in the Dynamic Island.</p>
-<p>To keep the Live Activity up to date while the app is closed, the app then sends the following to the developer's bus-times service (a Cloudflare Worker, with its database in Western Europe): a push token that Apple creates for this one Live Activity, the parking lot, the direction (to Plaza or to the parking lot) and until when. No name, roster, flight number, location or account. The service fetches the bus times from OVapi and sends them to your Lock Screen via Apple's push service. The entry is deleted as soon as the Live Activity ends, at the latest after 6 hours. The service keeps no logs with IP addresses. Cloudflare is a US company and participates in the EU-US Data Privacy Framework; Apple delivers the push messages under its own privacy policy, as with every push notification on your iPhone. Turning off the Live Activity, or choosing no parking lot, stops this at once.</p>
+<p>To keep the Live Activity up to date while the app is closed, the app then sends the following to the developer's bus-times service (a Cloudflare Worker, with its database in Western Europe): a push token that Apple creates for this one Live Activity, the parking lot, the direction (to Plaza or to the parking lot) and until when. No name, roster, flight number, location or account. To make sure only the genuine app uses this service, the app proves itself once per installation with Apple's App Attest; the service then keeps a random key ID with its public key, without name, device or account, and deletes it after 120 days without use. The service fetches the bus times from OVapi and sends them to your Lock Screen via Apple's push service. The entry is deleted as soon as the Live Activity ends, at the latest after 6 hours. The service keeps no logs with IP addresses. Cloudflare is a US company and participates in the EU-US Data Privacy Framework; Apple delivers the push messages under its own privacy policy, as with every push notification on your iPhone. Turning off the Live Activity, or choosing no parking lot, stops this at once.</p>
 
 <h2>New version check</h2>
 <p>At most once a day the app asks Apple's public App Store lookup which version of the app is the latest, so it can tell you when an update is available. Only the app's own ID is sent, nothing about you or your roster.</p>
@@ -59,7 +59,7 @@
 <hr>
 <section id="nl" lang="nl">
 <h1>Privacybeleid · Rooster Sync</h1>
-<p class="muted">Laatst bijgewerkt: 19 november 2026</p>
+<p class="muted">Laatst bijgewerkt: 20 november 2026</p>
 
 <p>Rooster Sync is een onofficiële, persoonlijke app waarmee je als crewlid je eigen rooster uit het crew portal haalt, bekijkt en in de iPhone-agenda zet. De app is niet gemaakt door of verbonden met de werkgever of de beheerder van het portal.</p>
 
@@ -86,7 +86,7 @@
 
 <h2>Bustijden (OVapi)</h2>
 <p>Alleen als je in Instellingen › Bus naar Plaza een parkeerterrein kiest (standaard uit), vraagt de app bij de openbare ov-dienst OVapi de tijden op van de shuttlebus tussen dat parkeerterrein en Schiphol Plaza, vóór een dienst vanaf Schiphol en na de landing daar. Daarbij gaan alleen de codes van de twee bushaltes mee, geen namen, vluchtnummers of andere roostergegevens. Deze verbinding is niet versleuteld, omdat OVapi alleen zo werkt; er zit niets over jou in. OVapi ziet het IP-adres van je toestel, zoals bij elke website. Zet je de Live Activity aan, dan staan de bustijden ook op je toegangsscherm en in het Dynamic Island.</p>
-<p>Om de Live Activity bij te werken terwijl de app dicht is, stuurt de app dan naar de bustijdendienst van de ontwikkelaar (een Cloudflare Worker, met de database in West-Europa): een push-token dat Apple voor deze ene Live Activity maakt, het parkeerterrein, de richting (naar Plaza of naar het parkeerterrein) en tot wanneer. Geen naam, rooster, vluchtnummer, locatie of account. De dienst haalt de bustijden bij OVapi op en stuurt ze via de pushdienst van Apple naar je toegangsscherm. Het gegeven wordt gewist zodra de Live Activity stopt, uiterlijk na 6 uur. De dienst bewaart geen logboeken met IP-adressen. Cloudflare is een Amerikaans bedrijf en neemt deel aan het EU-US Data Privacy Framework; Apple bezorgt de pushberichten onder zijn eigen privacybeleid, zoals bij elke pushmelding op je iPhone. Zet je de Live Activity uit, of kies je geen parkeerterrein, dan stopt dit meteen.</p>
+<p>Om de Live Activity bij te werken terwijl de app dicht is, stuurt de app dan naar de bustijdendienst van de ontwikkelaar (een Cloudflare Worker, met de database in West-Europa): een push-token dat Apple voor deze ene Live Activity maakt, het parkeerterrein, de richting (naar Plaza of naar het parkeerterrein) en tot wanneer. Geen naam, rooster, vluchtnummer, locatie of account. Om zeker te weten dat alleen de echte app deze dienst gebruikt, bewijst de app zich één keer per installatie met App Attest van Apple; de dienst bewaart dan een willekeurig sleutel-ID met de bijbehorende publieke sleutel, zonder naam, toestel of account, en wist die na 120 dagen zonder gebruik. De dienst haalt de bustijden bij OVapi op en stuurt ze via de pushdienst van Apple naar je toegangsscherm. Het gegeven wordt gewist zodra de Live Activity stopt, uiterlijk na 6 uur. De dienst bewaart geen logboeken met IP-adressen. Cloudflare is een Amerikaans bedrijf en neemt deel aan het EU-US Data Privacy Framework; Apple bezorgt de pushberichten onder zijn eigen privacybeleid, zoals bij elke pushmelding op je iPhone. Zet je de Live Activity uit, of kies je geen parkeerterrein, dan stopt dit meteen.</p>
 
 <h2>Controle op een nieuwe versie</h2>
 <p>Hooguit één keer per dag vraagt de app bij de openbare App Store-zoekfunctie van Apple wat de nieuwste versie van de app is, zodat hij kan melden dat er een update is. Daarbij gaat alleen het ID van de app mee, niets over jou of je rooster.</p>
